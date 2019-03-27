@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savanna's Train Scheduler</title>
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Sigmar+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center" id="heading">Savanna's Train Schedule</h1>
+      <h2 class="text-center" id="subHeading">Trying our best to help you always be on time</h2>
+      <p class="pull-right" id="currentTime"></p>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Train Schedule</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th class="text-center">Frequency</th>
+                  <th class="text-center">Next Arrival</th>
+                  <th class="text-center">Minutes Away</th>
+                  <th class="text-center">Remove</th>
+                </tr>
+              </thead>
+              <tbody id="train-table-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add New Train</h3>
+            <div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label class="label">Train Name</label>
+                    <input type="text" class="form-control form-field" id="train-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="label">Destination</label>
+                    <input type="text" class="form-control form-field" id="destination">
+                  </div>
+                  <div class="form-group">
+                    <label class="label">First Train Time: HH:mm - military time</label>
+                    <input type="text" class="form-control form-field" id="first-train">
+                  </div>
+                  <div class="form-group">
+                    <label class="label">Frequency (min)</label>
+                    <input type="text" class="form-control form-field" id="frequency">
+                  </div>
+
+                  <button type="submit" class="btn btn-default" id="submit">Add Train</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="Assets/app.js"></script>
+</body>
+
+</html>

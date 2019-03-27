@@ -1,0 +1,39 @@
+body {
+    background-color: slategray; 
+  }
+  
+#heading {
+    font-family: 'Sigmar One', sans-serif;
+    color: slategray; 
+  }
+  
+#subHeading {
+    font-family: 'Arial', sans-serif;
+    color: slategray;  
+  }
+
+.panel-title {
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold;
+    color: slategray; 
+  }
+  
+  th {
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold;
+    color: slategray; 
+  }
+
+  .label{
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold; 
+    color: slategray; 
+  }
+  #submit,.reset{
+	color: white;
+	font-family: 'Sigmar One', sans-serif;
+}
+  
+  #submit, .reset:hover{
+    background-color: slategray; 
+  }
